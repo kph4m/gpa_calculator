@@ -184,8 +184,7 @@ function calculateGPA () {
   ) {
     alert('Please add at least one course')
   } else {
-
-  /*
+    /*
   // Fields are blank
   else if (
     document.getElementById('credits1').value == '' ||
@@ -278,8 +277,10 @@ function calculateGPA () {
 //}
 
 // Clear all entries in table
-function clearAll () {
-  //clicked = false
+function reset () {
+  location.reload()
+
+  /*
   totalCredits = 0
   totalGradedProd = 0
   gpa = 0
@@ -295,4 +296,23 @@ function clearAll () {
   gpaProd = 0
   document.getElementById('gpa').innerHTML = ''
   document.getElementById('letter-grade').innerHTML = ''
+  */
 }
+
+// KEYBOARD FUNCTIONALITY
+document.addEventListener('keyup', e => {
+  // If plus, call addNewRow
+  if (e.key === 'Control') {
+    addNewRow()
+  }
+
+  // If enter, call calculateGrade
+  if (e.key === 'Enter') {
+    calculateGPA()
+  }
+
+  // If esc, call reset
+  if (e.key === 'Escape') {
+    reset()
+  }
+})

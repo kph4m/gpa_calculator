@@ -31,6 +31,28 @@
 
             <!-- METHOD 2: Loop through all classes-->
             <div class="inputs" id="wrapper">
+                <span>
+                    <input type="text" id="course1">
+                    <select id="grade1">
+                        <option value="None">-</option>
+                        <option value="Aplus">A+</option>
+                        <option value="Areg">A</option>
+                        <option value="Aminus">A-</option>
+                        <option value="Bplus">B+</option>
+                        <option value="Breg">B</option>
+                        <option value="Bminus">B-</option>
+                        <option value="Cplus">C+</option>
+                        <option value="Creg">C</option>
+                        <option value="Cminus">C-</option>
+                        <option value="Dplus">D+</option>
+                        <option value="Dreg">D</option>
+                        <option value="Dminus">D-</option>
+                        <option value="Freg">F</option>
+                    </select>
+
+                    <input type="number" id="credits1">
+
+                </span>
             </div>
 
             <!-- METHOD 1: Hardcode Classes
@@ -138,7 +160,7 @@
                 <button onClick="calculateGPA()" class="buttons"><b>CALCULATE GPA</b></button>
 
                 <!-- CLEAR BUTTON-->
-                <button onClick="clearAll()" class="buttons"><b>CLEAR ALL</b></button>
+                <button onClick="reset()" class="buttons"><b>RESET</b></button>
             </div>
 
             <!-- DISPLAYS-->
